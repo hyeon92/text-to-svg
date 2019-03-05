@@ -1,6 +1,5 @@
-build/
+# Node.js
+node_modules/
 
-### Node.js ###
-
-/package-lock.json
-/node_modules/
+# Build
+lib/

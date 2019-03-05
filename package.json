@@ -1,35 +1,16 @@
 {
   "name": "text-to-svg",
-  "version": "3.1.4",
-  "description": "Convert text to SVG path without native dependence.",
-  "main": "index.js",
-  "files": [
-    ".gitignore",
-    "CHANGELOG.md",
-    "README.md",
-    "package.json",
-    "node_modules",
-    "gulpfile.js",
-    "index.js",
-    "build",
-    "src",
-    "test",
-    "fonts",
-    "bin"
-  ],
-  "bin": {
-    "text-to-svg": "bin/text-to-svg"
-  },
+  "version": "1.0.0",
+  "description": "Convert text to SVG path without native dependencies.",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "gulp test",
-    "test:html": "gulp test:html",
-    "clean": "gulp clean",
-    "lint": "gulp lint",
-    "build": "gulp build"
+    "build": "cross-env ./scripts/build",
+    "lint": "cross-env eslint -c .eslintrc ./src/**/*.mjs",
+    "test": "echo \"no tests\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shrhdk/text-to-svg"
+    "url": "https://github.com/spurtli/text-to-svg.git"
   },
   "keywords": [
     "fonts",
@@ -40,33 +21,25 @@
     "vector"
   ],
   "author": "Hideki Shiro",
+  "contributors": [
+    "Hannes Moser <box@hannesmoser.at>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shrhdk/text-to-svg/issues"
+    "url": "https://github.com/spurtli/text-to-svg/issues"
   },
-  "homepage": "https://github.com/shrhdk/text-to-svg",
+  "homepage": "https://github.com/spurtli/text-to-svg",
   "dependencies": {
-    "commander": "^2.11.0",
     "opentype.js": "0.11.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
-    "@babel/register": "^7.0.0",
-    "browserify": "^16.2.3",
-    "del": "^3.0.0",
-    "eslint-plugin-arrow-function": "^2.0.0",
-    "eslint-plugin-classes": "^0.1.1",
-    "eslint-plugin-template-string": "^1.0.0",
-    "gulp": "^4.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-eslint": "^5.0.0",
-    "gulp-mocha": "^6.0.0",
-    "vinyl-source-stream": "^2.0.0"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
+    "cross-env": "^5.2.0",
+    "eslint": "^5.15.1",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "1.16.4"
   }
 }
