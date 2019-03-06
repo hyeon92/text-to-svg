@@ -29,6 +29,12 @@ export default class TextToSVG {
     });
   }
 
+  static loadSync(url) {
+    return new TextToSVG(
+      opentype.loadSync(url)
+    );
+  }
+
   getWidth(text, options = {}) {
     const { fontSize = 72, kerning = false, letterSpacing, tracking } = options;
     const fontScale = (1 / this.font.unitsPerEm) * fontSize;
