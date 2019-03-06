@@ -1,12 +1,14 @@
 {
-  "name": "text-to-svg",
-  "version": "1.0.0",
+  "name": "@spurtli/text-to-svg",
+  "version": "0.0.0-development",
   "description": "Convert text to SVG path without native dependencies.",
   "main": "lib/index.js",
+  "module": "src/index.mjs",
   "scripts": {
     "build": "cross-env ./scripts/build",
     "lint": "cross-env eslint -c .eslintrc ./src/**/*.mjs",
-    "test": "echo \"no tests\" && exit 1"
+    "test": "echo \"no tests\" && exit 1",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -40,6 +42,7 @@
     "eslint": "^5.15.1",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "1.16.4"
+    "prettier": "1.16.4",
+    "semantic-release": "^15.13.3"
   }
 }
