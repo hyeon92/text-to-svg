@@ -29,10 +29,10 @@ export default class TextToSVG {
     });
   }
 
-  getWidth(text, options) {
+  getWidth(text, options = {}) {
     const { fontSize = 72, kerning = false, letterSpacing, tracking } = options;
     const fontScale = (1 / this.font.unitsPerEm) * fontSize;
-    const glyphs = this.font.stringToGlyphs(text);
+    const glyphs = this.font.stringToGlyphs(String(text));
 
     return glyphs.reduce((width, glyph, i) => {
       if (glyph.advanceWidth) {
@@ -54,7 +54,7 @@ export default class TextToSVG {
     }, 0);
   }
 
-  getHeight(fontSize) {
+  getHeight(fontSize = 72) {
     const fontScale = (1 / this.font.unitsPerEm) * fontSize;
     return (this.font.ascender - this.font.descender) * fontScale;
   }
