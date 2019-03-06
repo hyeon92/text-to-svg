@@ -14,6 +14,9 @@
     "type": "git",
     "url": "https://github.com/spurtli/text-to-svg.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "fonts",
     "glyph",

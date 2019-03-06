@@ -1,5 +1,7 @@
 # text-to-svg
 
+[https://travis-ci.org/spurtli/text-to-svg.svg?branch=master](https://travis-ci.org/spurtli/text-to-svg/jobs/502359179#)
+
 > Convert text to SVG path without native dependencies. Forked from [shrhdk/text-to-svg](https://github.com/shrhdk/text-to-svg).
 
 ```js
