@@ -3,7 +3,7 @@
   "version": "0.0.0-development",
   "description": "Convert text to SVG path without native dependencies.",
   "main": "lib/index.js",
-  "module": "src/index.mjs",
+  "module": "src/index.module.js",
   "scripts": {
     "build": "cross-env ./scripts/build",
     "lint": "cross-env eslint -c .eslintrc ./src/**/*.mjs",
