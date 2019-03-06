@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-babel src -d lib
-cp src/index.mjs lib/index.module.js
